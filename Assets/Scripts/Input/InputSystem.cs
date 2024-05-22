@@ -20,7 +20,6 @@ public partial class InputSystem : SystemBase
         Vector2 moveVector = _controlECS.Player.Move.ReadValue<Vector2>();
         Vector2 mousePosition = _controlECS.Player.MousePos.ReadValue<Vector2>();
         bool shoot = _controlECS.Player.Shoot.IsPressed();
-
         SystemAPI.SetSingleton(new InputComponent
         {
             Movement = new float2(moveVector.x, moveVector.y),
